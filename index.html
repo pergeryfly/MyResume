@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pergeryfly's resume</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"></script>
+    <style type="text/css">
+        .icon {
+           width: 1em; height: 1em;
+           vertical-align: -0.15em;
+           fill: currentColor;
+           overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="siteWelcome" class="site-Welcome active">
+            <div class="loading"></div>
+    </div>
+    <div id="topNavbar" class="topNavBar">
+        <div class="topNavBar-inner clearfix">
+                <div class="logo">
+                        <a href="#" alt="logo"><span class="RS">RS</span><span class="card">card</span></a>
+                    </div>
+                <div class="nav menu">
+                        <ul class="clearfix">
+                            <li><a href="#">关于</a></li>
+                            <li><a href="#skills">技能</a></li>
+                            <li>
+                                <a href="#works">作品</a>
+                                <ul class="submenu"> 
+                                        <li>作品1</li>
+                                        <li>作品2</li>
+                                        <li>作品3</li>
+                                   </ul>
+                            </li>
+                            <li><a href="#">日历</a></li>
+                            <li >
+                                <a  href="#">博客</a>
+                                <ul class="submenu">
+                                    <li>博客1</li>
+                                    <li>博客2</li>
+                                    <li>博客3</li>
+                                </ul>
+                            </li>
+                            <li><a href="#">联系方式</a></li>
+                            <li><a href="#">其他</a></li>
+                        </ul>
+                    </div>
+        </div>
+    </div>
+    <div class="bannerbox">
+        <div class="banner">
+        </div>
+    </div>  
+    <div class="main">
+        <div class="UserCard">
+            <div class="PersonalInformation clearfix">
+                        <div class="photo">
+                            <img src="img/2.jpg" alt="photo">
+                        </div>
+                        <div class="SelfIntroduction">
+                            <span class="welcome">Hello <span class="triangle"></span></span>
+                            <h1>彭飞鹏</h1>
+                            <p>前端开发工程师</p>
+                            <hr>
+                            <dl class="clearfix">
+                                <dt>年龄</dt>
+                                <dd>24</dd>
+                                <dt>所在城市</dt>
+                                <dd>武汉</dd>
+                                <dt>邮箱</dt>
+                                <dd>pergeryfly@gmail.com</dd>
+                                <dt>手机</dt>
+                                <dd>13207170708</dd>
+                            </dl>
+                        </div>   
+                    </div>
+            <footer class="media">
+                <a href="#"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-github"></use>
+                    </svg></a>
+                <a href="#"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-twitter"></use>
+                    </svg></a>
+                <a href="#"><svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-qq"></use>
+                    </svg></a>
+            </footer>
+        </div>
+        <p class="button"><a href="img/6.pdf" target="_blank" download>PDF下载</a></p>   
+    </div> 
+    <section id="skills" class="skills">
+        <h1>技能</h1>
+        <ol class="clearfix">
+            <li>HTML 5 & CSS 3
+                <div class="bar-inner"><div class="bar"></div></div>
+            </li>
+            <li>JavaScript
+                <div class="bar-inner"><div class="bar"></div></div>
+            </li>
+            <li>jQuery
+                <div class="bar-inner"><div class="bar"></div></div>
+            </li>
+            <li>Vue.js
+                <div class="bar-inner"><div class="bar"></div></div>
+            </li>
+            <li>React.js
+                <div class="bar-inner"><div class="bar"></div></div>
+            </li>
+            <li>Node.js
+                <div class="bar-inner"><div class="bar"></div></div>
+            </li>
+        </ol>
+    </section>
+    <section id="works" class="works">
+        <h2>项目</h2>
+        <div class="nav-inner">
+            <div class="nav">
+                <ol class="clearfix">
+                    <li id="portfolio1">所有</li>
+                    <li id="portfolio2">框架</li>
+                    <li id="portfolio3">原生JS&CSS</li>
+                </ol>
+                <div id="portfolioBar" class="bar-inner state-1">
+                    <div class="bar"></div>
+                </div> 
+                <script>
+                        portfolio1.onclick = function () {
+                            portfolioBar.className = 'bar-inner state-1'
+                        }
+                        portfolio2.onclick = function () {
+                            portfolioBar.className = 'bar-inner state-2'
+                        }
+                        portfolio3.onclick = function () {
+                            portfolioBar.className = 'bar-inner state-3'
+                        }
+                    </script>
+            </div>  
+        </div>           
+        <div class="progress">
+                <div class="all"><img src="img/3.jpg" alt=""></div>
+                <div class="top"><img src="img/4.jpg" alt=""></div>
+                <div class="bottom"><img src="img/5.jpg" alt=""></div>
+        </div> 
+    </section>
+    <script>
+            setTimeout(function(){
+                siteWelcome.classList.remove("active")
+            },1000)
+            window.onscroll = function(){
+                if(window.scrollY>0){
+                    topNavbar.classList.add("sticky")
+                }
+                else{
+                    topNavbar.classList.remove("sticky")
+                }
+            }
+            let liTags = document.querySelectorAll('.nav.menu>ul>li')
+            for(let i=0; i<liTags.length; i++){
+                liTags[i].onmouseenter = function(x){
+                    x.currentTarget.classList.add('active')
+                //    let li= x.currentTarget
+                //    let brother = li.getElementsByTagName("ul")[0]
+                //    while(brother.nodeType === 3){
+                    //    brother = brother.nextSibling
+                //    }
+                    //   while(brother.tagName!=="UL"){
+                        // brother = brother.nextSibling
+                    //   }
+                }
+                liTags[i].onmouseleave =function(x){
+                    x.currentTarget.classList.remove('active')
+                }
+            }
+            let aTags =document.querySelectorAll('.nav.menu>ul>li>a')
+            for(let i=0;i<aTags.length;i++){
+                aTags[i].onclick =function(x){
+                     x.preventDefault()
+                    //  阻止a标签默认动作
+                    let a =x.currentTarget
+                    let href = a.getAttribute('href')
+                    let element = document.querySelector(href)
+                    let top =element.offsetTop
+                    window.scrollTo(0,top -80)
+                }
+            }
+            </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
- setTimeout(function(){
+ 
                 siteWelcome.classList.remove("active")
-            },1000)
+            
             window.onscroll = function(){
                 if(window.scrollY>0){
                     topNavbar.classList.add("sticky")

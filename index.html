@@ -6,15 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>pergeryfly's resume</title>
     <link rel="stylesheet" href="./css/style.css">
-    <script src="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"></script>
-    <style type="text/css">
-        .icon {
-           width: 1em; height: 1em;
-           vertical-align: -0.15em;
-           fill: currentColor;
-           overflow: hidden;
-        }
-    </style>
+    <link rel="shortcut icon" href="img/favacon.ico.jpg"/>
+    <script src="//at.alicdn.com/t/font_8d5l8fzk5b87iudi.js"></script>   
 </head>
 <body>
     
@@ -28,7 +21,7 @@
                     </div>
                 <div class="nav menu">
                         <ul class="clearfix">
-                            <li><a href="#">关于</a></li>
+                            <li><a href="#about">关于</a></li>
                             <li><a href="#skills">技能</a></li>
                             <li>
                                 <a href="#works">作品</a>
@@ -57,7 +50,7 @@
         <div class="banner">
         </div>
     </div>  
-    <div class="main">
+    <div id="about" class="main">
         <div class="UserCard">
             <div class="PersonalInformation clearfix">
                         <div class="photo">
@@ -148,47 +141,7 @@
                 <div class="bottom"><img src="img/5.jpg" alt=""></div>
         </div> 
     </section>
-    <script>
-            setTimeout(function(){
-                siteWelcome.classList.remove("active")
-            },1000)
-            window.onscroll = function(){
-                if(window.scrollY>0){
-                    topNavbar.classList.add("sticky")
-                }
-                else{
-                    topNavbar.classList.remove("sticky")
-                }
-            }
-            let liTags = document.querySelectorAll('.nav.menu>ul>li')
-            for(let i=0; i<liTags.length; i++){
-                liTags[i].onmouseenter = function(x){
-                    x.currentTarget.classList.add('active')
-                //    let li= x.currentTarget
-                //    let brother = li.getElementsByTagName("ul")[0]
-                //    while(brother.nodeType === 3){
-                    //    brother = brother.nextSibling
-                //    }
-                    //   while(brother.tagName!=="UL"){
-                        // brother = brother.nextSibling
-                    //   }
-                }
-                liTags[i].onmouseleave =function(x){
-                    x.currentTarget.classList.remove('active')
-                }
-            }
-            let aTags =document.querySelectorAll('.nav.menu>ul>li>a')
-            for(let i=0;i<aTags.length;i++){
-                aTags[i].onclick =function(x){
-                     x.preventDefault()
-                    //  阻止a标签默认动作
-                    let a =x.currentTarget
-                    let href = a.getAttribute('href')
-                    let element = document.querySelector(href)
-                    let top =element.offsetTop
-                    window.scrollTo(0,top -80)
-                }
-            }
-            </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>

@@ -1,4 +1,10 @@
 *{margin: 0; padding: 0;}
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
 ul,li{list-style: none;}
 .site-Welcome{
     display: none;
@@ -109,6 +115,14 @@ a{text-decoration: none;}
     border-bottom:3px solid transparent;
     padding: 5px 0;
     display: block;
+}
+.topNavBar  .nav>ul>li:nth-child(1)>a::after{
+    content: "";
+    display: block;
+    top:100%;
+    left: 0;
+    height: 3px;
+    background: #e06567;
 }
 .topNavBar  .nav>ul>li.active>a::after{
     content: "";

@@ -76,6 +76,27 @@ a{text-decoration: none;}
 .topNavBar-inner{
     padding: 0 20px;
 }
+.menu-small{
+box-sizing: border-box;
+display: none;
+color:#e8676b;
+font-size: 12px;
+font-weight: 700;
+letter-spacing: 1px;
+text-transform: uppercase;
+padding-left: 20px;
+padding-right: 20px;
+vertical-align: middle;
+border: 1px solid #d1d1d1;
+margin: 0;
+height: 50px;
+line-height: 50px;
+text-align: center;
+}
+.menu-small.sticky{
+    height:40px;
+    line-height: 40px;
+}
 .logo{
     float: left;
     padding-top: 3px;
@@ -257,7 +278,7 @@ p.button a{
     border-radius: 2px;
     color: #3d4451;
     font-weight: bold;
-    margin: 32px 0;
+    margin-top: 32px ;
     display: inline-block;
     border-radius: 2px;
     transition: box-shadow 0.5s;
@@ -265,9 +286,9 @@ p.button a{
 p.button a:hover{
     box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);
 }
-section.skills{
+section{
     max-width: 940px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 section.skills h1{
     text-align: center;
@@ -301,12 +322,6 @@ section.skills ol li .bar{
     background: #E6686A;
     width: 50%;
     border-radius: 2px;
-}
-section.works{
-    max-width: 940px;
-    margin: 0 auto;
-    margin-top: 60px;
-    margin-bottom: 100px;
 }
 section.works h2{
     text-align: center;
@@ -357,16 +372,42 @@ section.works .nav .bar-inner.state-3 .bar{
     margin-left: 143px;
     width: 39%;
 }
-section.works .progress .all{
-    position: absolute;
+section.works .progress {
+   display: flex;
+   justify-content:space-between;
 }
-section.works .progress .top{
-    position: relative;
-    top: 0;
-    left: 645px; 
+section.works .progress img{
+    width:100%;
+    height:auto;
 }
-section.works .progress .bottom{
-    position: relative;
-    top: 23px;
-    left: 645px;
+section.works .progress .right{
+  display: flex;
+  justify-content:space-between;
+  flex-direction: column;
+}
+@media(max-width:992px){
+    .menu-small{
+        float: right;
+        display:inline-block;
+    }
+    .topNavBar .nav>ul{
+       background:#e8676b;
+       display: none;
+       flex-direction: column;
+       position: absolute;
+       top:0;
+       right:0;
+       width:300px;
+       height: 100vh;
+       justify-content: flex-start;
+       align-items: center;
+    }
+    .topNavBar .nav>ul>li>a{
+        font-size: 2em;
+    }
+    .topNavBar .nav>ul>li.active>a::after,.topNavBar  .nav>ul>li:first-child>a::after{
+        display:none;
+       
+    }
+    section{magin:50px auto;}
 }

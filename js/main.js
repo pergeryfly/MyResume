@@ -4,9 +4,11 @@
             window.onscroll = function(){
                 if(window.scrollY>0){
                     topNavbar.classList.add("sticky")
+                    menuSlide.classList.add("sticky")
                 }
                 else{
                     topNavbar.classList.remove("sticky")
+                    menuSlide.classList.remove("sticky")
                 }
             }
             let liTags = document.querySelectorAll('.nav.menu>ul>li')
@@ -37,4 +39,13 @@
                     let top =element.offsetTop
                     window.scrollTo(0,top -80)
                 }
+            }
+            portfolio1.onclick = function () {
+                portfolioBar.className = 'bar-inner state-1'
+            }
+            portfolio2.onclick = function () {
+                portfolioBar.className = 'bar-inner state-2'
+            }
+            portfolio3.onclick = function () {
+                portfolioBar.className = 'bar-inner state-3'
             }

@@ -69,7 +69,7 @@ a{text-decoration: none;}
     background:WHITE;  
     transition: all 1s;
     padding: 10px 0;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     color:#3d4451;
 }
@@ -290,17 +290,17 @@ section{
     max-width: 940px;
     margin: 70px auto;
 }
-section.skills h1{
+ section.skills h1{
     text-align: center;
     font-size: 33px;
     font-weight: 600;
     line-height: 1.2;
+    margin-bottom: 30px;
 }
 section.skills ol{
     list-style: none;
     padding: 42px 50px 10px;
     background-color: white;
-    margin-top: 30px;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
 }
@@ -325,69 +325,29 @@ section.skills ol li .bar{
 }
 section.works h2{
     text-align: center;
-    font-size: 34px;
+    font-size: 33px;
     font-weight: 600;
-    line-height:1.2; 
-    color: #3d4451;
+    line-height: 1.2;
+    margin-bottom: 30px; 
 }
-section.works .nav-inner{
-    text-align: center;
-    margin-bottom: 32px;
+
+section.works .wrapper{
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
 }
-section.works .nav{
-    display: inline-block;
-    vertical-align: top;
-    margin-top: 32px;
-}
-section.works .nav ol{
-    list-style: none;    
-}
-section.works .nav ol li{
-    float: left;
-    margin-left: 40px;
-}
-section.works .nav ol li:first-child{
-    margin-left: 0;
-}
-section.works .nav .bar-inner{
-    margin-top: 5px;
-    height: 5px;
-    background: #FAE1E1;
-    border-radius: 2px;
-}
-section.works .nav .bar-inner .bar{
-    height: 100%;
-    background: #E6686A;
-    border-radius: 2px; 
-}
-section.works .nav .bar-inner.state-1 .bar{    
-    margin-left: 0%;
-    width: 13%;
-}
-section.works .nav .bar-inner.state-2 .bar{
-    margin-left: 73px;
-    width: 13%;    
-}
-section.works .nav .bar-inner.state-3 .bar{
-    margin-left: 143px;
-    width: 39%;
-}
-section.works .progress {
-   display: flex;
-   justify-content:space-between;
-}
-section.works .progress img{
-    width:100%;
-    height:auto;
-}
-section.works .progress .right{
-  display: flex;
-  justify-content:space-between;
-  flex-direction: column;
-}
+
+section.message > ol{
+    max-width: 700px;
+    margin: 0 auto;
+    border-top: 1px solid #DDD;
+  }
+  section.message > ol > li {
+    padding: 16px;
+    border-bottom: 1px solid #DDD;
+  }
+  
 @media(max-width:992px){
     .menu-small{
-        float: right;
+    
         display:inline-block;
     }
     .topNavBar .nav>ul{
@@ -409,5 +369,5 @@ section.works .progress .right{
         display:none;
        
     }
-    section{magin:50px auto;}
+    section{margin:50px auto;}
 }
